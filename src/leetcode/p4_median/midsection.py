@@ -54,7 +54,7 @@ def main(nums1: list[int], nums2: list[int]) -> float:
             upper = data1 if data1.median > data2.median else data2
             lower = data1 if data1.median < data2.median else data2
 
-            mid_nums = lower.nums + upper.nums[:upper.upper]
+            mid_nums = lower.nums + upper.nums[: upper.upper]
             mid_nums = filter(lambda x: x <= upper.median, mid_nums)
 
             mid_nums = list(mid_nums)

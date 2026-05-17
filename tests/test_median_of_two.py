@@ -5,13 +5,14 @@ The overall run time complexity should be O(log (m+n)).
 
 https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 """
+
 from enum import Enum
 from typing import Iterator
 
 import pytest
 
-from leetcode.p4_median.common import median
 from leetcode.p4_median import sort_gen
+from leetcode.p4_median.common import median
 
 
 class Case(Enum):

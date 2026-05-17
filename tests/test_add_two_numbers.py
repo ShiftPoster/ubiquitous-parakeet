@@ -13,9 +13,9 @@ import pytest
 
 
 class Case(Enum):
-    example1 = [2,4,3], [5,6,4], [7,0,8]
+    example1 = [2, 4, 3], [5, 6, 4], [7, 0, 8]
     example2 = [0], [0], [0]
-    example3 = [9,9,9,9,9,9,9], [9,9,9,9], [8,9,9,9,0,0,0,1]
+    example3 = [9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9], [8, 9, 9, 9, 0, 0, 0, 1]
 
     def __init__(self, l1, l2, sol) -> None:
         self.l1 = l1
@@ -27,7 +27,7 @@ def pseudo(l1, l2):
     solution = []
     carry = False
     for i, j in zip_longest(l1, l2, fillvalue=0):
-        s = i + j 
+        s = i + j
         if carry:
             s += 1
             carry = False
@@ -91,7 +91,7 @@ class Solution:
 def to_linked(ll) -> ListNode:
     ll = list(map(ListNode, ll))
     for i in range(len(ll) - 1):
-        ll[i].next = ll[i+1]
+        ll[i].next = ll[i + 1]
     return ll[0]
 
 
@@ -116,8 +116,8 @@ def test_solution(case: Case):
 
 
 class NoneCase(Enum):
-    first = [2,4,3], None, [2,4,3]
-    second = None, [5,6,4], [5,6,4]
+    first = [2, 4, 3], None, [2, 4, 3]
+    second = None, [5, 6, 4], [5, 6, 4]
     both = None, None, None
 
     def __init__(self, l1, l2, sol) -> None:
