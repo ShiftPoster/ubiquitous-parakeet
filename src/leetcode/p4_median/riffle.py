@@ -1,7 +1,9 @@
 from typing import Iterator
 
+# from .midsection import Data
 
-def sort_generator(nums1: list[int], nums2: list[int]) -> Iterator[int]:
+
+def riffle_sort(nums1: list[int], nums2: list[int]) -> Iterator[int]:
     """I think this is O(n1 +  n2)."""
     nums1_iter = iter(nums1)
     nums2_iter = iter(nums2)
@@ -40,7 +42,8 @@ def sort_generator(nums1: list[int], nums2: list[int]) -> Iterator[int]:
 
 
 def main(nums1: list[int], nums2: list[int]) -> float:
-    gen = sort_generator(nums1, nums2)
+
+    gen = riffle_sort(nums1, nums2)
 
     middle_i = (len(nums1) + len(nums2) - 1) / 2
     print(f"{middle_i = }")
