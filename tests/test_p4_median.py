@@ -7,11 +7,10 @@ https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 """
 
 from enum import Enum
-from typing import Iterator
 
 import pytest
 
-from leetcode.p4_median import sort_gen
+from leetcode.p4_median import run
 from leetcode.p4_median.common import median
 
 
@@ -47,12 +46,6 @@ def test_baseline(case: Case):
     assert baseline(case.l1, case.l2) == case.sol
 
 
-class Solution:
-    def findMedianSortedArrays(self, nums1: list[int], nums2: list[int]) -> float:
-        return sort_gen.main(nums1, nums2)
-
-
 @pytest.mark.parametrize("case", Case)
 def test_solution(case: Case):
-    ans = Solution().findMedianSortedArrays(case.l1, case.l2)
-    assert ans == case.sol
+    assert run(case.l1, case.l2) == case.sol
