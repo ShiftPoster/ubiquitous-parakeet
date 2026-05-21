@@ -40,8 +40,8 @@ def find_above(array: list[int], target: int) -> int:
 
         if array[mid] > target:
             # found new ceiling
-            if right >= 0:
-                if array[right] <=
+            # if right >= 0:
+            #     if array[right] <=
             high = mid + 1
         elif array[mid] < target:
             pass
