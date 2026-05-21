@@ -10,8 +10,8 @@ from enum import Enum
 
 import pytest
 
-from leetcode.p4_median import run
-from leetcode.p4_median.common import median
+from leetcode.p04_median import run
+from leetcode.p04_median.common import median
 
 
 class Case(Enum):

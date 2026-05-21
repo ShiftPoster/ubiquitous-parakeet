@@ -11,7 +11,8 @@ from itertools import zip_longest
 
 import pytest
 
-from leetcode.p2_add import ListNode, run
+from leetcode.common import ListNode
+from leetcode.p02_add import run
 
 
 class Case(Enum):

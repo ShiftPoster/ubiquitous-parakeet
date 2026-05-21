@@ -1,4 +1,4 @@
-from leetcode.p4_median import riffle
+from leetcode.p04_median import riffle
 
 
 class Solution:
