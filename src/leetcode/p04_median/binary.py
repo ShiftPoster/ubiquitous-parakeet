@@ -33,7 +33,6 @@ def find_above(array: list[int], target: int) -> int:
     high = len(array) - 1
     found = -1
 
-
     while low <= high:
         mid = (low + high) // 2
         right = mid - 1
@@ -46,16 +45,12 @@ def find_above(array: list[int], target: int) -> int:
         elif array[mid] < target:
             pass
 
-
-
         if array[mid] > target:
             right_i = mid - 1
             if right < 0:
                 ...
             elif array[right_i] < target:
                 found = mid
-
-
 
         # Check if target is present at mid
         if array[mid] == target:
@@ -67,6 +62,6 @@ def find_above(array: list[int], target: int) -> int:
         # If target is smaller, ignore right half
         else:
             high = mid - 1
-            
+
     # Target was not present in the array
     return found
