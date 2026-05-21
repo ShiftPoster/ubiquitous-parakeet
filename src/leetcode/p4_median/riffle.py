@@ -1,7 +1,5 @@
 from typing import Iterator
 
-# from .midsection import Data
-
 
 def riffle_sort(nums1: list[int], nums2: list[int]) -> Iterator[int]:
     """I think this is O(n1 +  n2)."""
@@ -42,17 +40,17 @@ def riffle_sort(nums1: list[int], nums2: list[int]) -> Iterator[int]:
 
 
 def main(nums1: list[int], nums2: list[int]) -> float:
-
     gen = riffle_sort(nums1, nums2)
 
-    middle_i = (len(nums1) + len(nums2) - 1) / 2
-    print(f"{middle_i = }")
-    for _ in range(int(middle_i)):
-        # skip
+    total_mid = (len(nums1) + len(nums2) - 1) / 2
+
+    # skip
+    for _ in range(int(total_mid)):
         next(gen)
+
     solution = next(gen)
     # if even
-    if middle_i != int(middle_i):
+    if total_mid != int(total_mid):
         solution = (solution + next(gen)) / 2
 
     return solution
